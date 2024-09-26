@@ -181,6 +181,10 @@ git clone https://github.com/MarcoMustacchi/tiago_iaslab_simulation_assignment1.
 ```bash
 mv tiago_iaslab_simulation_assignment1 tiago_iaslab_simulation
 ```
+#### Build the package
+```bash
+catkin build tiago_iaslab_simulation
+```
 
 # Fix a possible issue with LaserScan in simulation
 The LaserScan in the simulation may not be visible.  
