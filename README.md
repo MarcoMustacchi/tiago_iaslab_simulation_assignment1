@@ -58,6 +58,10 @@ xhost -local:docker
 > These applications rely on 3D rendering and OpenGL, which can be tricky to get working correctly in a Docker container.
 
 # Installation Guide
+#### 0: Source ROS installation using `~/.bashrc`
+```bash
+echo "source /opt/ros/noetic/setup.bash">> ~/.bashrc
+```
 #### 1: Create Workspace
 ```bash
 mkdir -p ~/tiago_public_ws/src
@@ -113,9 +117,6 @@ rosinstall src /opt/ros/noetic tiago_public-noetic.rosinstall
 
 #### 3. Run this command to make sure that all dependencies are installed
 ```bash
-sudo rosdep init
-```
-```bash
 rosdep update
 ```
 
@@ -126,17 +127,10 @@ rosdep install -y --from-paths src --ignore-src --rosdistro noetic --skip-keys "
 
 #### 5. Build the workspace
 ```bash
-source /opt/ros/noetic/setup.bash
-```
-```bash
 catkin build -DCATKIN_ENABLE_TESTING=0 -j $(expr `nproc` / 2)
 ```
 
-#### 6. Source the ROS workspace using ~/.bashrc
-```bash
-source ~/tiago_public_ws/devel/setup.bash
-```
-or **(Recommended but not mandatory)**
+#### 6. Source the ROS workspace using `~/.bashrc`
 ```bash
 echo "source ~/tiago_public_ws/devel/setup.bash">> ~/.bashrc
 ```
