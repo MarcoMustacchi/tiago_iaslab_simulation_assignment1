@@ -83,9 +83,13 @@ cd ~/tiago_public_ws/src
 
 ### Step 5: Clone the Package 
 ```bash
-git clone https://github.com/MarcoMustacchi/IntelligentRoboticsProject.git
+git clone https://github.com/MarcoMustacchi/tiago_iaslab_simulation_assignment1.git
 ```
-This will create the "tiago_iaslab_simulation" package
+
+### Step 6: Rename the package
+```bash
+mv tiago_iaslab_simulation_assignment1 tiago_iaslab_simulation
+```
 
 # Dependencies
 **NB.** This guide has been extracted from the official Wiki available at Robots/TIAGo/Tutorials so please, if you have any problem during the following steps, please take a look also at the official documentation.
