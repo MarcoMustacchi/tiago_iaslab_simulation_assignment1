@@ -57,39 +57,30 @@ xhost -local:docker
 > but still experiencing issues specifically with RViz and Gazebo. <br>
 > These applications rely on 3D rendering and OpenGL, which can be tricky to get working correctly in a Docker container.
 
+
 ## Installation Guide
-### Step 1: Create Workspace
+#### 1: Create Workspace
 ```bash
 mkdir -p ~/tiago_public_ws/src
 ```
-
-### Step 2: Navigate to Workspace
+#### 2: Navigate to Workspace
+```bash
+cd ~/tiago_public_ws/src
+```
+#### 3: Initialize the Workspace
+```bash
+catkin_init_workspace 
+```
+#### 4: Navigate to Workspace
 ```bash
 cd ~/tiago_public_ws
 ```
-
-### Step 3: Initialize the Workspace
+#### 5: Build the Workspace
 ```bash
 catkin build
 ```
 This will create the necessary build, devel, and src directories. 
 It also configures the workspace for ROS development.
-
-
-### Step 4: Navigate to src folder:
-```bash
-cd ~/tiago_public_ws/src
-```
-
-### Step 5: Clone the Package 
-```bash
-git clone https://github.com/MarcoMustacchi/tiago_iaslab_simulation_assignment1.git
-```
-
-### Step 6: Rename the package
-```bash
-mv tiago_iaslab_simulation_assignment1 tiago_iaslab_simulation
-```
 
 # Dependencies
 **NB.** This guide has been extracted from the official Wiki available at Robots/TIAGo/Tutorials so please, if you have any problem during the following steps, please take a look also at the official documentation.
@@ -186,6 +177,16 @@ cd ~/tiago_public_ws/src
 ```
 ```bash
 rm setup.bash setup.sh setup.zsh
+```
+
+# Package Installation
+#### Clone the Repository package 
+```bash
+git clone https://github.com/MarcoMustacchi/tiago_iaslab_simulation_assignment1.git
+```
+#### Rename the package
+```bash
+mv tiago_iaslab_simulation_assignment1 tiago_iaslab_simulation
 ```
 
 # Fix a possible issue with LaserScan in simulation
