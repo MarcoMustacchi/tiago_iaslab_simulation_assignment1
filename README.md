@@ -57,8 +57,7 @@ xhost -local:docker
 > but still experiencing issues specifically with RViz and Gazebo. <br>
 > These applications rely on 3D rendering and OpenGL, which can be tricky to get working correctly in a Docker container.
 
-
-## Installation Guide
+# Installation Guide
 #### 1: Create Workspace
 ```bash
 mkdir -p ~/tiago_public_ws/src
