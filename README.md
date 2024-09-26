@@ -150,26 +150,12 @@ roslaunch tiago_gazebo tiago_gazebo.launch public_sim:=true robot:=titanium
 ```
 
 #### 8. Delete all the installation scripts and setup files
-For installation scripts
 ```bash
-cd ~/tiago_public_ws
-```
-```bash
-rm tiago_public-noetic.rosinstall
+cd ~/tiago_public_ws && rm tiago_public-noetic.rosinstall
 ```
 and
 ```bash
-cd ~/tiago_public_ws/src
-```
-```bash
-rm .rosinstall
-```
-For the setup files
-```bash
-cd ~/tiago_public_ws/src
-```
-```bash
-rm setup.bash setup.sh setup.zsh
+cd ~/tiago_public_ws/src && rm .rosinstall && rm setup.bash setup.sh setup.zsh
 ```
 
 # Package Installation
